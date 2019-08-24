@@ -5,7 +5,7 @@ import NumberTile from '../NumberTile/NumberTile'
 import OperationTile from '../OperationTile/OperationTile'
 import FunctionTile from '../FunctionTile/FunctionTile'
 
-import {MAX_NUMBERS } from './config'
+import {MAX_NUMBERS, VIBRATION_MS } from './config'
 
 export default class Calculator extends Component {
 
@@ -17,10 +17,13 @@ export default class Calculator extends Component {
         isDone: false
     }
 
+    vibrate = () => {
+        window.navigator.vibrate(VIBRATION_MS)
+    }
+
     addNumber = (number) => {
         if(this.state.newNum.length > MAX_NUMBERS) {
             {/* dont do anything if maximum specified is reached */}
-            return;
           }
           else if (this.state.newNum === "0" && number === ".") {
             this.setState({
@@ -44,7 +47,7 @@ export default class Calculator extends Component {
                 newNum: this.state.newNum + (number)
             })
           }
-          window.navigator.vibrate(100)
+          this.vibrate();
     }
 
     clear = () => {
@@ -54,6 +57,7 @@ export default class Calculator extends Component {
             operator: undefined,
             isThereADot: false
         })
+        this.vibrate();
     }
 
     convert = () => {
@@ -67,6 +71,7 @@ export default class Calculator extends Component {
                 newNum: this.state.newNum.substring(1)
             })
           }
+          this.vibrate();
     }
 
     passNumbers = () => {
@@ -106,8 +111,6 @@ export default class Calculator extends Component {
                 break;
             default:
         }
-        console.log(this.state.newNum.length)
-
         if (!explicit) {
             this.passNumbers();
         }
@@ -118,6 +121,7 @@ export default class Calculator extends Component {
                 isDone: true
             })
         }
+        this.vibrate();
     }
 
     handleOperation = (operationSign) => {
@@ -130,6 +134,7 @@ export default class Calculator extends Component {
           else {
             this.calculate()
           }
+          this.vibrate();
     }
 
 
