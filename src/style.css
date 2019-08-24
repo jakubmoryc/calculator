@@ -100,10 +100,3 @@ a {
   transition-duration: 0.150s;
 
 }
-
-@media only screen and (max-width: 768px) {
-  #wrapper {
-    margin-bottom: 7vh;
-  }
-  }
-
