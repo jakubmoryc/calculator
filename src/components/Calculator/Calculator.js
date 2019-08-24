@@ -44,6 +44,7 @@ export default class Calculator extends Component {
                 newNum: this.state.newNum + (number)
             })
           }
+          window.navigator.vibrate(100)
     }
 
     clear = () => {
