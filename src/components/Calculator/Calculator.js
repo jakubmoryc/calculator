@@ -17,7 +17,7 @@ export default class Calculator extends Component {
         isDone: false
     }
 
-    vibrate = () => {
+    static vibrate = () => {
         window.navigator.vibrate(VIBRATION_MS)
     }
 
@@ -47,7 +47,7 @@ export default class Calculator extends Component {
                 newNum: this.state.newNum + (number)
             })
           }
-          this.vibrate();
+        Calculator.vibrate();
     }
 
     clear = () => {
@@ -57,7 +57,7 @@ export default class Calculator extends Component {
             operator: undefined,
             isThereADot: false
         })
-        this.vibrate();
+        Calculator.vibrate();
     }
 
     convert = () => {
@@ -71,7 +71,7 @@ export default class Calculator extends Component {
                 newNum: this.state.newNum.substring(1)
             })
           }
-          this.vibrate();
+          Calculator.vibrate();
     }
 
     passNumbers = () => {
@@ -121,7 +121,7 @@ export default class Calculator extends Component {
                 isDone: true
             })
         }
-        this.vibrate();
+        Calculator.vibrate();
     }
 
     handleOperation = (operationSign) => {
@@ -134,7 +134,7 @@ export default class Calculator extends Component {
           else {
             this.calculate()
           }
-          this.vibrate();
+        Calculator.vibrate();
     }
 
 
