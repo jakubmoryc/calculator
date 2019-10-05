@@ -1,9 +1,14 @@
 import React from 'react'
 
+import githubLogo from '../../img/github-logo.png'
+
 export default function Display(props) {
     return (
         <div id="display">
             <div id="displayTop">
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer"> 
+                    <img src={githubLogo} id="github-logo"  alt="GitHub"/>
+                </a>
                 {props.oldNumber}
             </div>
             <div id="displayBot">

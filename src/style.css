@@ -46,6 +46,11 @@ a {
 
 #displayTop {
   flex: 30%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   min-height: 3rem;
   padding: 0.75rem;
 
@@ -100,4 +105,9 @@ a {
   background: #00a9ff;
   transition-duration: 0.150s;
 
+}
+
+#github-logo {
+  height: 24px;
+  width: auto;
 }
