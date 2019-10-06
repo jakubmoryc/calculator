@@ -6,7 +6,7 @@ export default function Display(props) {
     return (
         <div id="display">
             <div id="displayTop">
-                <a href="https://github.com/jakubmoryc/calculator/tree/master" target="_blank" rel="noopener noreferrer"> 
+                <a href="https://github.com/jakubmoryc/calculator/tree/master" target="_blank" rel="noopener noreferrer" title="See code on GitHub"> 
                     <img src={githubLogo} id="github-logo" alt="GitHub"/>
                 </a>
                 {props.oldNumber}

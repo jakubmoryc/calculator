@@ -5,18 +5,18 @@ export default function NumberTile({number, zero, add, dot}) {
     const classes = `tile numberTile ${isZero}`;
     return dot ?
    (
-    <a className={classes} onClick={(e) => {e.preventDefault()}}>
+    <button className={classes} onClick={(e) => {e.preventDefault()}}>
       <div>
        {number}
       </div>
-    </a>
+    </button >
     ) 
     : 
     (
-    <a className={classes} onClick={(e) => {add(number)}}>
+    <button  className={classes} onClick={(e) => {add(number)}}>
       <div>
        {number}
       </div>
-    </a>
+    </button >
     )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function OperationTile({operationSign, operationPassed, explicit}) {
     return (
-        <a 
+        <button  
         className="tile operationTile" 
         onClick={(e) => {
                 explicit ?
@@ -12,6 +12,6 @@ export default function OperationTile({operationSign, operationPassed, explicit}
             <div className="">
                 {operationSign}
             </div>
-        </a>
+        </button >
     )
 }
