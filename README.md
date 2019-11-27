@@ -13,8 +13,6 @@ It is also fully responsive.
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
-
 ## Credits
 
 App was built by [Jakub Moryc](https://jakubmoryc.github.io/).
