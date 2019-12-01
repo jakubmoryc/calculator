@@ -132,6 +132,9 @@ export default class Calculator extends Component {
             this.passNumbers()
           }
           else {
+            this.setState({
+                operator: operationSign
+            })
             this.calculate()
           }
         Calculator.vibrate();
