@@ -113,5 +113,10 @@ button {
   height: 24px;
   width: auto;
 
-  transition-duration: 0.250;
+  transition-duration: 0.250s;
+  filter: invert(25%);
+}
+
+#github-logo:hover {
+  filter: invert(0%);
 }
