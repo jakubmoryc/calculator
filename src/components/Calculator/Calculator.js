@@ -86,27 +86,28 @@ export default class Calculator extends Component {
         switch(this.state.operator) {
             case "+":
                 this.setState({
-                    newNum: (parseFloat(this.state.oldNum) + parseFloat(this.state.newNum)).toString()
+                    //newNum: (parseFloat(this.state.oldNum) + parseFloat(this.state.newNum)).toString()
+                    newNum: (window.math.format(window.math.add(parseFloat(this.state.oldNum), parseFloat(this.state.newNum)), {precision: 14}))
                 })
                 break;
             case "-":
                 this.setState({
-                    newNum: (parseFloat(this.state.oldNum) - parseFloat(this.state.newNum)).toString()
+                    newNum: (window.math.format(window.math.subtract(parseFloat(this.state.oldNum), parseFloat(this.state.newNum)), {precision: 14}))
                 })
                 break;
             case "X":
                 this.setState({
-                    newNum: (parseFloat(this.state.oldNum) * parseFloat(this.state.newNum)).toString()
+                    newNum: (window.math.format(window.math.multiply(parseFloat(this.state.oldNum), parseFloat(this.state.newNum)), {precision: 14}))
                 })
                 break;
             case "/":
                 this.setState({
-                    newNum: (parseFloat(this.state.oldNum) / parseFloat(this.state.newNum)).toString()
+                    newNum: (window.math.format(window.math.divide(parseFloat(this.state.oldNum), parseFloat(this.state.newNum)), {precision: 14}))
                 })
                 break;
             case "%":
                 this.setState({
-                    newNum: (parseFloat(this.state.oldNum) % parseFloat(this.state.newNum)).toString()
+                    newNum: (window.math.format(window.math.mod(parseFloat(this.state.oldNum), parseFloat(this.state.newNum)), {precision: 14}))
                 })
                 break;
             default:
