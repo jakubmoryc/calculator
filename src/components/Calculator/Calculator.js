@@ -7,6 +7,8 @@ import FunctionTile from '../FunctionTile/FunctionTile'
 
 import {MAX_NUMBERS, VIBRATION_MS } from './config'
 
+import {format, add, divide, multiply, subtract, mod} from 'mathjs/number'
+
 export default class Calculator extends Component {
 
     state = {
